@@ -1,0 +1,33 @@
+body{
+    background-image: url(rainbow.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.head {
+    color: rgb(13, 38, 222);
+    text-align: center;
+    font-style: bold;
+    font-size: 25px;
+}
+
+.Buttontable1 {
+  
+}
+
+.cow {
+border-left: 5px solid orange;
+border-right: 5px solid red;
+border-top: 5px solid purple;
+border-bottom: 5px solid yellowgreen;
+}
+
+.Introtxt {
+font-size: 24px;
+font-weight: bold;
+font-family: sans-serif;
+background: linear-gradient(90deg, violet, indigo, blue, green, yellow, orange, red);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text; /* Firefox */
+color: transparent;
+}
