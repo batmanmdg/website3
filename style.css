@@ -27,7 +27,7 @@ font-weight: bold;
 font-family: sans-serif;
 font-display: white;
 -webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+-webkit-text-fill-color: white;
 background-clip: text; /* Firefox */
 color: transparent;
 }
