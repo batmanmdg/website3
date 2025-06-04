@@ -30,3 +30,7 @@ color: white;
 font-size: 24px;
 font-weight: bold;
 }
+
+.bold {
+    font-weight: bold;
+}
