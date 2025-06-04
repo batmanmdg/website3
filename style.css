@@ -28,5 +28,5 @@ font-family: sans-serif;
 -webkit-background-clip: text;
 -webkit-text-fill-color: white;
 background-clip: text; /* Firefox */
-color: white;
+color: orange;
 }
