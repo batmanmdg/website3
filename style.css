@@ -1,3 +1,7 @@
+html {
+    font-family: 'Times New Roman', Times, serif;
+}
+
 body{
     background-image: url(rainbow.jpg);
     background-repeat: no-repeat;
@@ -25,5 +29,4 @@ border-bottom: 5px solid yellowgreen;
 color: white;
 font-size: 24px;
 font-weight: bold;
-font-family: sans-serif;
 }
