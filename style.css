@@ -132,3 +132,12 @@ body.contact-page {
         font-size: 20px;
     }
 }
+.h1contactme {
+    color: white;
+    font-weight: bold;
+}
+
+.freemessage {
+    color: white;
+    font-size: 2em;
+}
