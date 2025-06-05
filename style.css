@@ -10,6 +10,23 @@ html body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #ffe0f0, #f5faff);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .head h1 {
+            font-size: 2.2rem;
+            color: #d6336c;
+            text-align: center;
+        }
+        
 .head {
     color: rgb(13, 38, 222);
     text-align: center;
@@ -47,7 +64,7 @@ html body{
     font-weight: bold;
     text-align: center;
     padding: 0 10px;
-    text-shadow: 1px 1px 3px black;
+    text-shadow: 1px 1px 3px whitesmoke;
 }
 
 
