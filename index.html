@@ -1,73 +1,123 @@
-<!DOCTYPE HTML>
-<HTML>
-    <head>
-    <link rel="stylesheet" href="style.css">
-        <title>Celebrate a special day</title>
-    
-    </head>
-    <body>
-        <!-- Include the canvas-confetti library -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-
-<script>
-    function launchFancyFireworks() {
-        const duration = 1 * 1000;
-        const animationEnd = Date.now() + duration;
-        const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 1000 };
-
-        function randomInRange(min, max) {
-            return Math.random() * (max - min) + min;
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Celebrate a special day</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #ffe0f0, #f5faff);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
         }
 
-        const interval = setInterval(function () {
-            const timeLeft = animationEnd - Date.now();
+        .head h1 {
+            font-size: 2.2rem;
+            color: #d6336c;
+            text-align: center;
+        }
 
-            if (timeLeft <= 0) {
-                return clearInterval(interval);
+        .contact-btn {
+            background-color: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .contact-btn:hover {
+            background-color: #e91e63;
+        }
+
+        .cow {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .Introtxt {
+            font-size: 1.1rem;
+            color: #333;
+            max-width: 600px;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .head h1 {
+                font-size: 1.6rem;
+            }
+            .Introtxt {
+                font-size: 1rem;
+            }
+            .contact-btn {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function launchFancyFireworks() {
+            const duration = 1000;
+            const animationEnd = Date.now() + duration;
+            const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 1000 };
+
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
             }
 
-            const particleCount = 50 * (timeLeft / duration);
-            // Fire from the left and right edges
-            confetti(Object.assign({}, defaults, {
-                particleCount,
-                origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
-                colors: ['#bb0000', '#ffffff', '#0000ff', '#00ff00', '#ffcc00']
-            }));
-            confetti(Object.assign({}, defaults, {
-                particleCount,
-                origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
-                colors: ['#bb0000', '#ffffff', '#0000ff', '#00ff00', '#ffcc00']
-            }));
-        }, 250);
-    }
+            const interval = setInterval(function () {
+                const timeLeft = animationEnd - Date.now();
+                if (timeLeft <= 0) return clearInterval(interval);
 
-    // Run once on load
-    window.onload = () => {
-        launchFancyFireworks();
+                const particleCount = 50 * (timeLeft / duration);
+                confetti(Object.assign({}, defaults, {
+                    particleCount,
+                    origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+                    colors: ['#bb0000', '#ffffff', '#0000ff', '#00ff00', '#ffcc00']
+                }));
+                confetti(Object.assign({}, defaults, {
+                    particleCount,
+                    origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+                    colors: ['#bb0000', '#ffffff', '#0000ff', '#00ff00', '#ffcc00']
+                }));
+            }, 250);
+        }
 
-        // Repeat every 5 seconds
-        setInterval(launchFancyFireworks, 5000);
-    };
-</script>
+        window.onload = () => {
+            launchFancyFireworks();
+            setInterval(launchFancyFireworks, 5000);
+        };
+    </script>
 
-        <div class="head">
-            <h1>🎉Bonne fête Audrey🎉</h1>
-        </div>
+    <div class="head">
+        <h1>🎉Bonne fête Audrey🎉</h1>
+    </div>
 
-        <table>
-            
-            <tr>
-                <td><a href="contactme.html">
-  <button class="contact-btn">Contact Me</button>
-</a>
-</td>
-            </tr>
-        </table>
-        
-            <img src="cow.jpeg" class="cow">
-        </div>
-        <p class="Introtxt">
-                Bonne fête à une fabuleuse personne. Bienvenue dans le club des <span class="bold">32 ans</span>. Sache que tu vieillis très bien et deviens de plus en plus une personne formidable. N'oublie pas de bien profiter de la vie réaliser tes rêves car nous savons tous à quel point celle-ci est fragile.
-        </p>
-    </body>
-</HTML>
+    <a href="contactme.html">
+        <button class="contact-btn">Contact Me</button>
+    </a>
+
+    <img src="cow.jpeg" class="cow" alt="Birthday Cow" />
+
+    <p class="Introtxt">
+        Bonne fête à une fabuleuse personne. Bienvenue dans le club des <span class="bold">32 ans</span>. Sache que tu vieillis très bien et deviens de plus en plus une personne formidable. N'oublie pas de bien profiter de la vie réaliser tes rêves car nous savons tous à quel point celle-ci est fragile.
+    </p>
+</body>
+</html>
