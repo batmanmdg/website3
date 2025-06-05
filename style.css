@@ -42,7 +42,7 @@ html body{
 
 
 .Introtxt {
-    color: white;
+    color: whitesmoke;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
@@ -104,6 +104,7 @@ body.contact-page {
 }
 @media (max-width: 600px) {
     .Introtxt {
+        color: whitesmoke;
         font-size: 16px;
     }
     .contact-btn {
