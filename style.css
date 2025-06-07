@@ -75,11 +75,10 @@ body {
     background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
     background-size: 400% 400%;
 
-    /* Clip background to text */
+   
     background-clip: text;
     -webkit-background-clip: text;
 
-    /* Make text transparent to show background */
     color: transparent;
     -webkit-text-fill-color: transparent;
 
