@@ -1,34 +1,38 @@
-html {
-    font-family: 'Times New Roman', Times, serif;
-}
+/* GLOBAL RESET */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
+/* FULL BACKGROUND STRETCH */
 body {
     background-image: url(rainbow.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 100%;      /* 👈 Stretch to full width AND height */
-    background-position: center center;
+    background-size: 100% 100%;
+    background-position: center;
     background-attachment: fixed;
 
     font-family: 'Arial', sans-serif;
+}
+
+/* WRAPPER THAT FILLS SCREEN */
+.main {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 20px;
+    box-sizing: border-box;
 }
-
-
 
 .head h1 {
-            font-size: 2.2rem;
-            color: #d6336c;
-            text-align: center;
+    font-size: 2.2rem;
+    color: #d6336c;
+    text-align: center;
 }
-        
+
 .head {
     color: rgb(13, 38, 222);
     text-align: center;
@@ -49,7 +53,6 @@ body {
     background-color: #0056b3;
 }
 
-
 .dre {
     max-width: 25%;
     height: auto;
@@ -59,7 +62,6 @@ body {
     border-bottom: 5px solid yellowgreen;
 }
 
-
 .Introtxt {
     color: whitesmoke;
     font-size: 20px;
@@ -67,24 +69,59 @@ body {
     text-align: center;
 }
 
-
-.bold {
+.wavy32 {
     font-weight: bold;
     font-size: 32px;
+    background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+
+    /* Clip background to text */
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    /* Make text transparent to show background */
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    animation: rainbowWave 3s ease-in-out infinite;
+    display: inline-block;
 }
+
+
+@keyframes rainbowWave {
+    0%, 100% {
+        transform: translateY(0px);
+        background-position: 0% 50%;
+    }
+    50% {
+        transform: translateY(-6px);
+        background-position: 100% 50%;
+    }
+}
+
 
 @media (max-width: 600px) {
     .bold {
         font-size: 22px;
     }
+    .Introtxt {
+        font-size: 16px;
+    }
+    .contact-btn {
+        width: 90%;
+    }
+    .head {
+        font-size: 20px;
+    }
 }
 
+/* CONTACT PAGE STYLING */
 body.contact-page {
     font-family: Arial, sans-serif;
-    font-display: white;
     text-align: center;
     padding: 20px;
     background: url(rainbow.jpg);
+    background-size: cover;
 }
 
 .contact-form {
@@ -120,18 +157,7 @@ body.contact-page {
 .contact-form button:hover {
     background: #218838;
 }
-@media (max-width: 600px) {
-    .Introtxt {
-        color: whitesmoke;
-        font-size: 16px;
-    }
-    .contact-btn {
-        width: 90%;
-    }
-    .head {
-        font-size: 20px;
-    }
-}
+
 .h1contactme {
     color: white;
     font-weight: bold;
