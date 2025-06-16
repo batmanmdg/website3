@@ -12,8 +12,48 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
-
     font-family: 'Arial', sans-serif;
+}
+
+/* Nav Bar*/
+nav, header, footer {
+    display: block;
+}
+
+nav {
+    width: 100%;
+    margin: 0;
+}
+
+nav ul {
+    overflow: hidden;
+    background-color: #eee;
+    margin: 0;
+    padding: 0;
+}
+
+ul.topnav li {
+    list-style: none;
+    float: left;
+}
+
+nav li.topnav-right {
+    float: right;
+}
+
+nav li a {
+    display: block;
+    text-decoration: none;
+    min-height: 16px;
+    text-align: center;
+    padding: 14px;
+    text-transform: uppercase;
+    color: #666;
+}
+
+ul.topnav li a:hover {
+    background-color: #0056b3;
+    color: #fff;
 }
 
 /* WRAPPER THAT FILLS SCREEN */
