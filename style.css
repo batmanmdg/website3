@@ -56,12 +56,20 @@ ul.topnav li a:hover {
     color: #fff;
 }
 
-ul.topnav li.DropdownIcon li {
-    display: block;
+ul.topnav li.DropdownIcon {
+    display: none;
 }
 
+/*    Mobile.   */
+
 @media screen and (max-width:600px) {
-    
+    ul.topnav li:not(:nth-child(1)) {
+    display: none;
+}}
+
+ul.topnav li.DropdownIcon {
+    display: block;
+    float: right;
 }
 
 /* WRAPPER THAT FILLS SCREEN */
