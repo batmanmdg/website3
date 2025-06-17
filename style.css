@@ -56,6 +56,14 @@ ul.topnav li a:hover {
     color: #fff;
 }
 
+ul.topnav li.DropdownIcon li {
+    display: block;
+}
+
+@media screen and (max-width:600px) {
+    
+}
+
 /* WRAPPER THAT FILLS SCREEN */
 .main {
     min-height: 100vh;
