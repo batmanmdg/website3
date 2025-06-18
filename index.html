@@ -20,9 +20,21 @@
             <li><a href="#Contact Us">Contact Us</a></li>
             <li class="topnav-right"><a href="#Sign Up">Sign Up</a></li>
             <li class="topnav-right"><a href="#Sign In">Sign In</a></li>
-            <li class="DropdownIcon"><a href="">&#9776;</a></li>
+            <li class="DropdownIcon"><a href="javascript:void(0);" onclick="dropdownMen()">&#9776;</a></li>
         </ul>
    </nav>
+
+   <script>
+            function dropdownMen() {
+                var x = document.getElementById("DropdownClick");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                   x.className = "topnav";
+                }
+            }
+        </script>
+
     <div class="main">
         <div class="head">
             <h1>🎉Bonne fête Audrey🎉</h1>
