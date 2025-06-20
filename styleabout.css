@@ -1,54 +1,43 @@
 /* GLOBAL RESET */
 html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
 }
 
-/* FULL BACKGROUND STRETCH */
+/* BACKGROUND */
 body {
     background-image: url(rainbow.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
     font-family: 'Arial', sans-serif;
 }
 
-/* Nav Bar*/
-nav, header, footer {
-    display: block;
-}
-
+/* NAVIGATION */
 nav {
     width: 100%;
     margin: 0;
 }
 
-nav ul {
-    overflow: hidden;
+ul.topnav {
     background-color: #eee;
+    overflow: hidden;
     margin: 0;
     padding: 0;
 }
 
 ul.topnav li {
-    list-style: none;
+    list-style-type: none;
     float: left;
 }
 
-nav li.topnav-right {
-    float: right;
-}
-
-nav li a {
+ul.topnav li a {
     display: block;
     text-decoration: none;
-    min-height: 16px;
-    text-align: center;
     padding: 14px;
+    color: #333;
     text-transform: uppercase;
-    color: #666;
+    text-align: center;
 }
 
 ul.topnav li a:hover {
@@ -56,78 +45,43 @@ ul.topnav li a:hover {
     color: #fff;
 }
 
-ul.topnav li.DropdownIcon {
-    display: none;
-}
-
-/*    Mobile.   */
-
-@media screen and (max-width: 680px) {
-    ul.topnav li:not(:nth-child(1)) {
-        display: none;
-    }
-
-
-ul.topnav li.DropdownIcon {
-    display: block;
+ul.topnav .topnav-right {
     float: right;
 }
 
-ul.topnav.responsive li.DropdownIcon {
-    position: absolute;
-    top: 0;
-    right: 0;
+ul.topnav .DropdownIcon {
+    display: none;
 }
 
-ul.topnav.responsive {
-    position: relative;
-}
+/* ===== MOBILE RESPONSIVE ===== */
+@media screen and (max-width: 400px) {
+    /* Show only Home and Hamburger */
+    ul.topnav li {
+        display: none;
+    }
 
-ul.topnav.responsive li {
-    display: inline;
-    float: none;
-}
+    ul.topnav li:first-child,
+    ul.topnav li.DropdownIcon {
+        display: block;
+    }
 
-ul.topnav.responsive li a {
-    display: block;
-    text-align: left;
-}}
-/* WRAPPER THAT FILLS SCREEN */
-.main {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
+    ul.topnav li.DropdownIcon {
+        float: right;
+    }
 
-.head h1 {
-    font-size: 2.2rem;
-    font-family: "Savate",serif;
-    color: #d6336c;
-    text-align: center;
-}
+    ul.topnav.responsive {
+        position: relative;
+    }
 
-.head {
-    color: rgb(13, 38, 222);
-    font-family: "Savate",serif;
-    text-align: center;
-    font-weight: bold;
-    font-size: 25px;
-}
+    ul.topnav.responsive li {
+        float: none;
+        display: block;
+        text-align: left;
+    }
 
-.contact-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    ul.topnav.responsive li.DropdownIcon {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 }
-.contact-btn:hover {
-    background-color: #0056b3;
-}
-

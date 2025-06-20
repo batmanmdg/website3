@@ -1,0 +1,246 @@
+/* GLOBAL RESET */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* FULL BACKGROUND STRETCH */
+body {
+    background-image: url(rainbow.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Nav Bar*/
+nav, header, footer {
+    display: block;
+}
+
+nav {
+    width: 100%;
+    margin: 0;
+}
+
+nav ul {
+    overflow: hidden;
+    background-color: #eee;
+    margin: 0;
+    padding: 0;
+}
+
+ul.topnav li {
+    list-style: none;
+    float: left;
+}
+
+nav li.topnav-right {
+    float: right;
+}
+
+nav li a {
+    display: block;
+    text-decoration: none;
+    min-height: 16px;
+    text-align: center;
+    padding: 14px;
+    text-transform: uppercase;
+    color: #666;
+}
+
+ul.topnav li a:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+ul.topnav li.DropdownIcon {
+    display: none;
+}
+
+/*    Mobile.   */
+
+@media screen and (max-width: 680px) {
+    ul.topnav li:not(:nth-child(1)) {
+        display: none;
+    }
+
+
+ul.topnav li.DropdownIcon {
+    display: block;
+    float: right;
+}
+
+ul.topnav.responsive li.DropdownIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+ul.topnav.responsive {
+    position: relative;
+}
+
+ul.topnav.responsive li {
+    display: inline;
+    float: none;
+}
+
+ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+}}
+/* WRAPPER THAT FILLS SCREEN */
+.main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.head h1 {
+    font-size: 2.2rem;
+    font-family: "Savate",serif;
+    color: #d6336c;
+    text-align: center;
+}
+
+.head {
+    color: rgb(13, 38, 222);
+    font-family: "Savate",serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.contact-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.contact-btn:hover {
+    background-color: #0056b3;
+}
+
+.dre {
+    max-width: 32%;
+    height: auto;
+    border-left: 5px solid orange;
+    border-right: 5px solid red;
+    border-top: 5px solid purple;
+    border-bottom: 5px solid yellowgreen;
+}
+
+.Introtxt {
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.wavy32 {
+    font-weight: bold;
+    font-size: 32px;
+    background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+
+   
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    animation: rainbowWave 3s ease-in-out infinite;
+    display: inline-block;
+}
+
+
+@keyframes rainbowWave {
+    0%, 100% {
+        transform: translateY(0px);
+        background-position: 0% 50%;
+    }
+    50% {
+        transform: translateY(-6px);
+        background-position: 100% 50%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .bold {
+        font-size: 22px;
+    }
+    .Introtxt {
+        font-size: 16px;
+    }
+    .contact-btn {
+        width: 90%;
+    }
+    .head {
+        font-size: 20px;
+    }
+}
+
+/* CONTACT PAGE STYLING */
+body.contact-page {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background: url(rainbow.jpg);
+    background-size: cover;
+}
+
+.contact-form {
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #218838;
+}
+
+.h1contactme {
+    color: white;
+    font-weight: bold;
+}
+
+.freemessage {
+    color: white;
+    font-size: 2em;
+}

@@ -4,9 +4,31 @@
     <meta charset="UTF-8" />
     <title>Contact Me – Patstar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contactme.css" />
 </head>
 <body class="contact-page">
+  <nav>
+        <ul class="topnav" id="DropdownClick">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="#News">News</a></li>
+            <li><a href="contactme.html">Contact Us</a></li>
+            <li class="topnav-right"><a href="#Sign Up">Sign Up</a></li>
+            <li class="topnav-right"><a href="#Sign In">Sign In</a></li>
+            <li class="DropdownIcon"><a href="javascript:void(0);" onclick="dropdownMen()">&#9776;</a></li>
+        </ul>
+   </nav>
+
+   <script>
+            function dropdownMen() {
+                var x = document.getElementById("DropdownClick");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                   x.className = "topnav";
+                }
+            }
+        </script>
     <h1 class="h1contactme">Contact Me</h1>
     <p class="freemessage">Feel free to send a message!</p>
     <form id="contactForm" class="contact-form">
