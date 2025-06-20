@@ -1,3 +1,11 @@
+/* GLOBAL RESET */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* FULL BACKGROUND STRETCH */
 body {
     background-image: url(rainbow.jpg);
     background-repeat: no-repeat;
@@ -5,18 +13,6 @@ body {
     background-position: center;
     background-attachment: scroll;
     font-family: 'Arial', sans-serif;
-    height: 100%;
-}
-
-h1 {
-    text-align: center;
-    color: white;
-    text-decoration: wavy;
-}
-
-p {
-    color: white;
-    text-align: left;
 }
 
 /* Nav Bar*/
@@ -96,3 +92,42 @@ ul.topnav.responsive li a {
     display: block;
     text-align: left;
 }}
+/* WRAPPER THAT FILLS SCREEN */
+.main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.head h1 {
+    font-size: 2.2rem;
+    font-family: "Savate",serif;
+    color: #d6336c;
+    text-align: center;
+}
+
+.head {
+    color: rgb(13, 38, 222);
+    font-family: "Savate",serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.contact-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.contact-btn:hover {
+    background-color: #0056b3;
+}
+
