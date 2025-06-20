@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand+Pre:wght@400..700&family=Savate:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styleabout.css">
+        <title>About</title>
+    </head>
+    <body>
+        <nav>
+        <ul class="topnav" id="DropdownClick">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="#News">News</a></li>
+            <li><a href="contactme.html">Contact Us</a></li>
+            <li class="topnav-right"><a href="#Sign Up">Sign Up</a></li>
+            <li class="topnav-right"><a href="#Sign In">Sign In</a></li>
+            <li class="DropdownIcon"><a href="javascript:void(0);" onclick="dropdownMen()">&#9776;</a></li>
+        </ul>
+   </nav>
+
+   <script>
+            function dropdownMen() {
+                var x = document.getElementById("DropdownClick");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                   x.className = "topnav";
+                }
+            }
+        </script>
+        <h1>My Story</h1>
+
+        <p>This is actually my first website I am creating. I have decided to do this project for a friends birthday. I could only do the bare minimum from what I learned so far. Everytime I learn something I code ii in this project.</p>
+   
+   
+   
+   
+    </body>
+
+
+
+
+
+
+</html>
