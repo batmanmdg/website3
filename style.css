@@ -8,7 +8,7 @@ html, body {
 /* FULL BACKGROUND STRETCH */
 body {
     background-image: url(rainbow.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
@@ -107,13 +107,13 @@ ul.topnav.responsive li a {
     font-size: 2.2rem;
     font-family: "Savate",serif;
     color: #d6336c;
-    text-align: center;
+    text-align: top;
 }
 
 .head {
     color: rgb(13, 38, 222);
     font-family: "Savate",serif;
-    text-align: center;
+    text-align: top;
     font-weight: bold;
     font-size: 25px;
 }
