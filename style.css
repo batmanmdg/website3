@@ -118,6 +118,14 @@ ul.topnav.responsive li a {
     font-size: 25px;
 }
 
+h1 {
+    color: #d6336c;
+    font-family: "Savate",serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
 .contact-btn {
     padding: 10px 20px;
     font-size: 16px;
