@@ -9,7 +9,7 @@ html, body {
 body {
     background-image: url(rainbow.jpg);
     background-repeat: repeat-y;
-    background-size: cover;
+    background-size: auto;
     background-position: center;
     background-attachment: scroll;
     font-family: 'Arial', sans-serif;
