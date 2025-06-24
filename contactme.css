@@ -92,6 +92,7 @@ ul.topnav.responsive li a {
     display: block;
     text-align: left;
 }
+}
 /* WRAPPER THAT FILLS SCREEN */
 .main {
     min-height: 100vh;
