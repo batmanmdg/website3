@@ -13,12 +13,12 @@
     <script src="script.js" defer></script>
 
     <style>
-      /* ✅ Styling for the Facebook button */
-      .fb-button {
+      /* ✅ Styling for the buttons */
+      .fb-button, .app-button {
         display: inline-block;
         margin-top: 15px;
         padding: 12px 20px;
-        background-color: #1877f2;
+        background-color: #1877f2; /* Default blue for app button */
         color: #fff;
         font-size: 16px;
         font-weight: bold;
@@ -28,13 +28,12 @@
         border: none;
         cursor: pointer;
       }
-      .fb-button:hover {
+      .fb-button:hover, .app-button:hover {
         background-color: #145dbf;
       }
     </style>
 </head>
 
-<!-- ✅ Removed padding: now matches homepage layout -->
 <body class="contact-page" style="padding: 0;">
     <nav>
         <ul class="topnav" id="DropdownClick">
@@ -48,7 +47,6 @@
         </ul>
     </nav>
 
-    <!-- Optional: keep inline fallback script -->
     <script>
         function dropdownMen() {
             var x = document.getElementById("DropdownClick");
@@ -74,14 +72,11 @@
         <button class="contact-btn">Return Home</button>
     </a>
 
-    <!-- ✅ Facebook App Button -->
-    <a href="fb://profile" class="fb-button"
-       onclick="setTimeout(function(){ window.location='https://www.facebook.com/'; }, 500);">
-       Open Facebook
-    </a>
+    <!-- ✅ Universal “Open Omni App” button -->
+    <button class="app-button" id="openAppBtn">Open Omni App</button>
 
-    <!-- Contact Form Submission Script -->
     <script>
+        // Contact Form Submission Script
         const form = document.getElementById('contactForm');
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -105,6 +100,28 @@
             } catch (error) {
                 alert('Oops! There was a problem submitting your form.');
             }
+        });
+
+        // ✅ Universal “Open App or Fallback” Script
+        const openAppBtn = document.getElementById('openAppBtn');
+
+        const appScheme = 'omni://'; // Replace with Omni app URI scheme if known
+        const fallbackWeb = 'https://www.omni.com/'; // Replace with website or App Store link
+
+        openAppBtn.addEventListener('click', function() {
+            const start = Date.now();
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            iframe.src = appScheme;
+            document.body.appendChild(iframe);
+
+            setTimeout(function() {
+                const end = Date.now();
+                if (end - start < 2000) {
+                    window.location.href = fallbackWeb;
+                }
+                document.body.removeChild(iframe);
+            }, 1500);
         });
     </script>
 </body>
