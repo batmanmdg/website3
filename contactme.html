@@ -11,6 +11,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand+Pre&family=Savate:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+
+    <style>
+      /* ✅ Styling for the Facebook button */
+      .fb-button {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 20px;
+        background-color: #1877f2;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 6px;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+      }
+      .fb-button:hover {
+        background-color: #145dbf;
+      }
+    </style>
 </head>
 
 <!-- ✅ Removed padding: now matches homepage layout -->
@@ -51,6 +72,12 @@
 
     <a href="index.html">
         <button class="contact-btn">Return Home</button>
+    </a>
+
+    <!-- ✅ Facebook App Button -->
+    <a href="fb://profile" class="fb-button"
+       onclick="setTimeout(function(){ window.location='https://www.facebook.com/'; }, 500);">
+       Open Facebook
     </a>
 
     <!-- Contact Form Submission Script -->
